@@ -1,0 +1,12 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+server:
+  port: 8004
+spring:
+  application:
+    name: ribbon-service
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: ["hystrix.stream"]

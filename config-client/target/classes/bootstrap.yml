@@ -1,0 +1,32 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
+  application:
+    name: config-client
+  cloud:
+    bus:
+      trace:
+        enabled: true
+    discovery:
+      enabled: true
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8007/
+server:
+  port: 8008
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+logging:
+  level:
+    ROOT: info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]
